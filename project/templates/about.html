@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>About</h1>
+
+<p>
+  Over 22 million comments were submitted to the FCC on the
+  topic of Net Neutrality.  The vast majority of these were
+  pre-fabricated comments, submitted by both real people and
+  automated "bots".  Only a small fraction were comments that
+  were uniquely created, likely by a person with a very real
+  personal stake in the FCC's decisions on Net Neutrality.
+</p>
+
+<p>
+  After removing pre-fabricated comments, short submissions (less than
+  140 characters) and filings with inconsistent addresses (e.g. zip
+  code in wrong state), the resulting 502,667 submissions can be
+  viewed on <a href="/">the accompanying map</a> based on the
+  Congressional District the filer resided in.
+</p>
+
+<h5>Thanks to...</h5>
+
+<ul>
+  <li>
+    <a href="https://www.fightforthefuture.org">Fight for the
+    Future</a> and <a href="https://ragtag.org">RagTag</a> for their
+    interest in coming together to analyze the comment data.  The
+    pre-fabricated templates have been identified and removed using
+    code in
+    RagTag's <a href="https://github.com/RagtagOpen/fccforensics">fccforensics</a>
+    repository.  Read
+    a <a href="https://medium.com/ragtag-notes/bot-or-not-verifying-public-comments-on-net-neutrality-8c77ee54a02e">blog
+    post</a> about that work.
+  </li>
+  <li>
+    Mike Bostock's
+    <a href="https://bl.ocks.org/mbostock/4657115">D3+SVG
+    Congressional District Map</a>, which was the starting point for
+    the visualization work.
+  </li>
+</ul>
+
+<h5>License</h5>
+Released under <a href="https://opensource.org/licenses/GPL-3.0">GNU General Public License, version 3</a>
+
+{% endblock %}

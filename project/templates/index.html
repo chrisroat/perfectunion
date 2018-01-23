@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>FCC Net Neutrality Comments By District</h1>
+
+How to use this map:
+<ul>
+  <li><span class="font-weight-bold font-italic text-success">Click</span>
+  on a district to view sample comments from that district.
+  <br>
+  <li><span class="font-weight-bold font-italic text-success">Hover</span> over
+  a district to see how many unique comments were submitted from that
+  district.
+</ul>
+
+<p>
+  These are the uniquely created comments, regardless of their stance on Net Neutrality.<br>
+  <span class="font-weight-bold">No comments were removed based on being pro- or anti-
+    Net Neutrality.</span>
+</p>
+
+<div class="modal fade" id="data" tabindex="-1" role="dialog" aria-labelledby="data" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">
+    	  <span id="state_name"></span>'s <span id="district"></span>
+    	  District
+	</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+
+    	<div class="no-comment-div">
+    	  No comments submitted from this district.
+    	</div>
+
+    	<div class="has-comment-div">
+    	  <h6 class="card-title">
+    	    <strong><span id="name"></span></strong>
+    	    from <strong><span id="city"></span>, <span id="state_abbr"></span></strong>
+    	  </h6>
+    	  <p class="card-text">
+    	    <span id="comment"></span>
+    	  </p>
+    	</div>
+
+      </div>
+
+      <div class="modal-footer">
+	<a id="fcc_link" href="#" class="mr-auto has-comment-div" target="_blank">Full Submission on FCC website</a>
+        <button id="next"
+		type="button"
+		class="btn btn-primary has-comment-div">
+	  Another District Comment
+	</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+<script src="/static/main.js"></script>
+{% endblock %}
