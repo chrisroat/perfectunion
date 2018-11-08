@@ -49,7 +49,7 @@ def counts():
 
   def title(state_fips, district_fips, count):
     state_name = states.lookup(state_fips).name
-    return '%s\'s %s District<br>%d comments' % (state_name, district_name(district_fips), count)
+    return '%s\'s %s District\n%d comments' % (state_name, district_name(district_fips), count)
 
   result = {key(s, d): title(s, d, c) for s, d, c in query}
   return flask.jsonify({'title': result})
