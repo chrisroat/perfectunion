@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+# About
 
-You can use the [editor on GitHub](https://github.com/chrisroat/perfectunion/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Over 22 million comments were submitted to the FCC on the
+topic of Net Neutrality.  The vast majority of these were
+pre-fabricated comments, submitted by both real people and
+automated "bots".  Only a small fraction were comments that
+were uniquely created, likely by a person with a very real
+personal stake in the FCC's decisions on Net Neutrality.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+After removing pre-fabricated comments, short submissions (less than
+140 characters) and filings with inconsistent addresses (e.g. zip
+code in wrong state), the resulting 502,667 submissions can be
+viewed on [Perfect Union](https://perfectunion.herokuapp.com/) based on the
+Congressional District the filer resided in.
 
-### Markdown
+## The internet made this possible
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- All the comment data was downloaded from the [FCC's Electronic Comment
+  Filing System](https://www.fcc.gov/ecfs/)
+  
+- Thanks to [Fight for the Future](https://www.fightforthefuture.org) and
+  [Ragtag](https://ragtag.org) for their interest in coming together to analyze
+  the comment data.  The pre-fabricated templates have been identified and
+  removed using code in Ragtag's 
+  [fccforensics](https://github.com/RagtagOpen/fccforensics) repository.  Read a
+  [blog post](https://medium.com/ragtag-notes/bot-or-not-verifying-public-comments-on-net-neutrality-8c77ee54a02e)
+  about that work.
 
-```markdown
-Syntax highlighted code block
+- Mike Bostock's 
+  [D3+SVG Congressional District Map](https://bl.ocks.org/mbostock/4657115)
+  was the starting point for the visualization work.
 
-# Header 1
-## Header 2
-### Header 3
+## License
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/chrisroat/perfectunion/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+The [code for this website](https://github.com/chrisroat/perfectunion) is
+released under
+[GNU General Public License, version 3](https://opensource.org/licenses/GPL-3.0)
