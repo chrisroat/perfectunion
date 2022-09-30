@@ -1,0 +1,9 @@
+.gcloudignore
+.git
+.gitignore
+data/
+venv/
+requirements.base.txt
+workspace.code-workspace
+README.md
+LICENSE

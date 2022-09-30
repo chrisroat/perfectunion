@@ -1,0 +1,7 @@
+flask
+flask-limiter
+flask-sqlalchemy
+num2words
+sqlalchemy
+sqlalchemy-bigquery
+us

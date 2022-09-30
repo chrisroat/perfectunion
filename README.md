@@ -10,7 +10,7 @@ personal stake in the FCC's decisions on Net Neutrality.
 After removing pre-fabricated comments, short submissions (less than
 140 characters) and filings with inconsistent addresses (e.g. zip
 code in wrong state), the resulting 502,667 submissions can be
-viewed on [Perfect Union](https://perfectunion.herokuapp.com/) based on the
+viewed on [Perfect Union](https://perfectunion.chrisroat.net/) based on the
 Congressional District the filer resided in.
 
 ## The internet made this possible

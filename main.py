@@ -1,15 +1,15 @@
 import flask
 import flask_limiter
-from flask_limiter import util
 import flask_sqlalchemy
 import num2words
-import os
+
+from flask_limiter import util
 from sqlalchemy.sql import func
 from us import states
 
 
 app = flask.Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = "bigquery://perfectunion/perfectunion"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = flask_sqlalchemy.SQLAlchemy(app)
@@ -17,7 +17,8 @@ db = flask_sqlalchemy.SQLAlchemy(app)
 limiter = flask_limiter.Limiter(
   app,
   key_func=util.get_remote_address,
-  default_limits=["200 per day", "60 per hour", "10 per minute", "2 per second"]
+  default_limits=["200 per day", "60 per hour", "10 per minute", "2 per second"],
+  storage_uri="memory://",
 )
 
 class CommentData(db.Model):
@@ -50,7 +51,7 @@ def counts():
   def title(state_fips, district_fips, count):
     state_name = states.lookup(state_fips).name
     return '%s\'s %s District\n%d comments' % (state_name, district_name(district_fips), count)
-
+  
   result = {key(s, d): title(s, d, c) for s, d, c in query}
   return flask.jsonify({'title': result})
 
@@ -76,7 +77,7 @@ def data():
   query = query.filter(CommentData.state_fips == state_fips)
   query = query.filter(CommentData.district_fips == district_fips)
 
-  query = query.order_by(func.random())  # NOTE: may be slow for large tables
+  query = query.order_by(func.rand())
   comment_data = query.first()
 
   if comment_data:
@@ -100,3 +101,6 @@ def district_name(district_fips):
 @app.errorhandler(429)
 def ratelimit_handler(e):
   return "Take it easy!  You exceeded the rate limit: %s" % e.description
+
+if __name__ == "__main__":
+  app.run(debug=True)
