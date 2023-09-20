@@ -1,1 +1,1 @@
-web: gunicorn --reload app:app
+web: WEB_CONCURRENCY=1 gunicorn app:app --reload --log-file=-

@@ -10,7 +10,7 @@ personal stake in the FCC's decisions on Net Neutrality.
 After removing pre-fabricated comments, short submissions (less than
 140 characters) and filings with inconsistent addresses (e.g. zip
 code in wrong state), the resulting 502,667 submissions can be
-viewed on [Perfect Union](https://perfectunion.herokuapp.com/) based on the
+viewed on [Perfect Union](https://perfectunion-74390256d772.herokuapp.com/) based on the
 Congressional District the filer resided in.
 
 ## The internet made this possible
@@ -21,12 +21,12 @@ Congressional District the filer resided in.
 - Thanks to [Fight for the Future](https://www.fightforthefuture.org) and
   [Ragtag](https://ragtag.org) for their interest in coming together to analyze
   the comment data.  The pre-fabricated templates have been identified and
-  removed using code in Ragtag's 
+  removed using code in Ragtag's
   [fccforensics](https://github.com/RagtagOpen/fccforensics) repository.  Read a
   [blog post](https://medium.com/ragtag-notes/bot-or-not-verifying-public-comments-on-net-neutrality-8c77ee54a02e)
   about that work.
 
-- Mike Bostock's 
+- Mike Bostock's
   [D3+SVG Congressional District Map](https://bl.ocks.org/mbostock/4657115)
   was the starting point for the visualization work.
 
